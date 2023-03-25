@@ -22,6 +22,15 @@
 img {
   height: 200px;
   width: 250px;
+  opacity: 1;
+  filter: brightness(95%);
+  filter: saturate(100%);
+}
+
+img:hover {
+  opacity: 0.9;
+  filter: saturate(120%);
+  scale: 1.01;
 }
 
 h1 {

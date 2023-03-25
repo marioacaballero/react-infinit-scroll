@@ -1,6 +1,7 @@
-import { useFetch } from "./UseFecth";
-import "./App.css";
 import { ChaoticOrbit } from "@uiball/loaders";
+import { useFetch } from "./UseFecth";
+import Card from "./Card";
+import "./App.css";
 
 function App() {
   const { photos, ref } = useFetch();
@@ -11,7 +12,13 @@ function App() {
       <div className="photos">
         {photos.length ? (
           photos.map((photo) => (
-            <img key={photo.id} alt={photo.type} src={photo.webformatURL} />
+            <Card
+              key={photo.id}
+              type={photo.type}
+              pageURL={photo.pageURL}
+              webformatURL={photo.webformatURL}
+              id={photo.id}
+            />
           ))
         ) : (
           <></>
